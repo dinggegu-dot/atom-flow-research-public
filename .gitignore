@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+dist/
+build/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Runtime
+.runtime/
+*.model-secrets.json
+*.log
+# Empty SQLite sidecar files left behind by local tooling
+*.ses
+
+# IDE
+.vscode/
+
+# Local npm configuration
+.npmrc
+
+# Local knowledge QA backups, corpus and generated artifacts
+/tmp/knowledge-presentation-v1/
+# Isolated Article Mind Map corpus, generated private content and runtime
+/tmp/article-mind-map-v2/
+# Private complete runtime backups for explicitly approved adoptions
+/backend/.runtime-backups/
+
+# Mature Product V1 isolated QA and recovery assets
+/tmp/mature-product-v1/
+
+# Private local processing runtimes, originals, caches and recovery copies
+/tmp/
+/output/
+*.tsbuildinfo
+
+# Local application data and release copies
+/.vite/
+/backend/releases/
+/releases/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Existing local dependency links used for isolated validation
+/backend/.venv
+/frontend/node_modules
+
+# Sanitized audit evidence intentionally versioned
+!/docs/audit/2026-11-12/*.log

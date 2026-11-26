@@ -1,0 +1,129 @@
+/* AFR 首页与有固定主题入口的知识卡片。 */
+:is(:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]), .canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"]))) {
+    --afr-ink: #29383d;
+    --afr-link: #425f69;
+    --afr-link-hover: #263f47;
+    --afr-rule: #d9e2e3;
+    --afr-blue: #edf3f5;
+    --afr-gray: #f2f3f1;
+}
+
+.theme-dark :is(:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]), .canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"]))) {
+    --afr-ink: #e0e7e7;
+    --afr-link: #b1cbd3;
+    --afr-link-hover: #d5e8eb;
+    --afr-rule: #425155;
+    --afr-blue: #2c383e;
+    --afr-gray: #333936;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) {
+    --file-line-width: 800px;
+    --link-color: var(--afr-link);
+    --link-color-hover: var(--afr-link-hover);
+    font-size: 16px;
+    line-height: 1.58;
+    color: var(--afr-ink);
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .markdown-preview-sizer {
+    padding-top: 28px;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .inline-title {
+    color: var(--afr-ink);
+    font-size: 1.85em;
+    line-height: 1.24;
+    margin-bottom: 0.6em;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) h2 {
+    font-size: 1.23em;
+    line-height: 1.35;
+    margin-top: 1.5em;
+    border-bottom: 1px solid var(--afr-rule);
+    padding-bottom: 0.4em;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) li + li {
+    margin-top: 0.26em;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) :is(.internal-link, .cm-hmd-internal-link) {
+    color: var(--afr-link);
+    text-decoration-color: color-mix(in srgb, var(--afr-link), transparent 45%);
+    text-underline-offset: 0.18em;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .callout:is([data-callout="afr-status"], [data-callout="afr-progress"]) {
+    color: var(--afr-ink);
+    background: var(--afr-blue);
+    border: 1px solid var(--afr-rule);
+    border-radius: 8px;
+    margin: 0.6em 0;
+    padding: 10px 14px;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .callout[data-callout="afr-progress"] {
+    background: var(--afr-gray);
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .callout:is([data-callout="afr-status"], [data-callout="afr-progress"]) .callout-title {
+    color: var(--afr-ink);
+    font-size: 0.94em;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .callout:is([data-callout="afr-status"], [data-callout="afr-progress"]) .callout-icon {
+    display: none;
+}
+
+:is(.markdown-preview-view, .markdown-source-view):has(.callout[data-callout="afr-status"]) .callout-content > p:first-child {
+    margin: 0.3em 0 0;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .canvas-node-content :is(.markdown-rendered, .markdown-preview-view) {
+    color: var(--afr-ink);
+    font-size: 17px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .canvas-node-content :is(h1, h2) {
+    font-size: 23px;
+    line-height: 1.28;
+    color: var(--afr-ink);
+    margin: 0 0 0.56em;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .canvas-node-content :is(p, ul, ol) {
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 0 0 0.64em;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .canvas-node-content em {
+    font-size: 0.91em;
+    font-style: normal;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .internal-link {
+    color: var(--afr-link);
+    text-decoration-color: color-mix(in srgb, var(--afr-link), transparent 40%);
+    text-underline-offset: 0.19em;
+}
+
+.canvas-node:has(a.internal-link:is([data-href^="知识总结/"], [href^="知识总结/"], [data-href^="./篇内论述"], [data-href^="../文章白板"])) .internal-link:hover {
+    color: var(--afr-link-hover);
+}
+
+/* 缩小时保留完整的月份标签，原文链接沿用白板的低饱和配色。 */
+.canvas-group-label { font-weight: 580; max-width: none !important; }
+.canvas-node:has(a.internal-link[data-href*="固定原文"]) a.internal-link {
+    color: #425f69;
+    text-decoration-color: #9badaf;
+    text-underline-offset: 0.16em;
+}
+.theme-dark .canvas-node:has(a.internal-link[data-href*="固定原文"]) a.internal-link {
+    color: #b1cbd3;
+    text-decoration-color: #6e868d;
+}
